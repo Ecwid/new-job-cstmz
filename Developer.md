@@ -1,52 +1,72 @@
-
 # Test task for TypeScript/Vue.js/NodeJS developer in Lightspeed E-Series Customization Service
 
-## Goal
-Write a full stack application for an Ecwid store that has:
+In this test task you will build a custom widget for an Ecwid online store that can be controlled from a separate settings page. Also, the settings page should contain a block to select and export products to a CSV file.
 
-- Ecwid storefront on a dedicated web page
-- Storefront widget with a settings page
-- Export catalog to a CSV file
+## Task 1
 
-The application must be wrapped in a Docker container.
+Develop an application for the Ecwid online store that shows N of the recently updated products.
 
-### Data
+Embed an Ecwid online store into a regular website. A custom “Recently updated products” block is shown when visiting the cart page of the store: [https://ecwid.d.pr/i/o3nTlW](https://ecwid.d.pr/i/o3nTlW)
+
+### Requirements
+
+- The recently updated products list appears on the cart page below the checkout section. Example: https://ecwid.d.pr/i/o3nTlW
+- The design of the custom products list replicates the default Ecwid products list styles
+- Customers can add products to the cart right from the list (add “Buy now” or similar button)
+- Customers can open the product details page by clicking on the product name or image in the product list
+- Customers can change the number of recently updated products shown in the list.
+- The store owner should know what products in the order were added from the “Recently updated products” block. (Hint: Use order extra fields)
+
+## Task 2
+
+Develop a backend application for exporting products from an Ecwid online store. A user can visit a specific website page where they can see all store products and export all or some of them into a readable CSV/XLSX file.
+
+### Requirements
+
+Requirements
+The settings page for your application is based on Ecwid CSS Framework components.
+The setting page includes feature description (what your application does) with on/off toggle to manage custom product list appearance
+Export products section should consist of a table-like list of store products with checkboxes and “Export selected products” button.
+Store owner can choose the products for the export using checkboxes
+Products list exported in CSV format
+Export and CSV download starts automatically when a store owner clicks the  “Export selected products” button.
+
+## Task 3 (optional)
+
+Add the functionality to enable/disable the “Recently updated products” block to the settings page of your app.
+
+### Requirements
+
+- On/off toggle is present on the settings page area of your app (task 2)
+- “Recently updated products” block is visible only if the toggle is in the “On” state (task 1)
+
+## Task 4
+
+The project must be buildable on any machine using Docker Compose. The project should be easy to understand and work with.
+
+### Requirements
+
+- The project has a Git repo-like structure with a proper README.md file
+- The whole project can be launched within a single entry point for building and running the app (use Docker compose).
+
+## Data
+
 Store data must be accessed using [Ecwid REST API](https://api-docs.ecwid.com/reference/rest-api)
 
-The easiest way is to use a demo store. Here's the access info:
+The easiest way is to use the demo store. Here's the access info:
+
 - StoreID: 101560752
 - Token: public_eaBDuVmrse1hKZun4qaPF3LewugrnEgq
 
-### Storefront widget
-Develop a widget that displays N of the recently updated products in a store.
+## Useful links
 
-The widget should display on the cart page in a form of upsell block (buy more products) under the current order total. Store customer should be able to choose between different number of items to show.
-
-Products in this widget should be displayed as a product grid. Clicking on a product should direct a customer to a product details page of that product.
-
-Each product grid item should have a "Buy now" button adding that product to customer's cart. The items that were added using this button should be saved in order extra fields.
-
-### Settings page
-
-The settings page needs to have the following blocks:
-- Feature description
-- Toggle to turn storefront widget ON/OFF
-- A list of store products with checkboxes
-- Button to export selected products into a CSV file
-
-The settings page must be developed using the [Ecwid CSS Framework](https://api-docs.ecwid.com/reference/ecwid-css-framework)
-
-### Backend
-
-The backend feature should be built with NodeJS and allow your Settings Page component to generate a CSV file with product information in a store.
+- https://support.ecwid.com/hc/en-us/articles/115004678945-Ecwid-for-any-website
+- https://api-docs.ecwid.com/reference/customize-behaviour
 
 ## Technologies
+
 - Typescript
-- VueJS 3
+- Vue.js 3 (composition API)
 - HTML/CSS
-- NodeJS
-- Docker
-
-## Design
-
-User interfaces should look nice and readable. 
+- Node.js
+- Docker (compose)
