@@ -23,13 +23,12 @@ Develop a backend application for exporting products from an Ecwid online store.
 
 ### Requirements
 
-Requirements
-The settings page for your application is based on Ecwid CSS Framework components.
-The setting page includes feature description (what your application does) with on/off toggle to manage custom product list appearance
-Export products section should consist of a table-like list of store products with checkboxes and “Export selected products” button.
-Store owner can choose the products for the export using checkboxes
-Products list exported in CSV format
-Export and CSV download starts automatically when a store owner clicks the  “Export selected products” button.
+- The settings page for your application is based on Ecwid CSS Framework components.
+- The setting page includes feature description (what your application does) with on/off toggle to manage custom product list appearance
+- Export products section should consist of a table-like list of store products with checkboxes and “Export selected products” button.
+- Store owner can choose the products for the export using checkboxes
+- Products list exported in CSV format
+- Export and CSV download starts automatically when a store owner clicks the  “Export selected products” button.
 
 ## Task 3 (optional)
 
