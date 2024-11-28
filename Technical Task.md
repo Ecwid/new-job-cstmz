@@ -63,7 +63,7 @@ Store data must be accessed using [Ecwid REST API](https://api-docs.ecwid.com/re
 The easiest way is to use the demo store. Here's the access info:
 
 - StoreID: `101560752`
-- Token: `public_eaBDuVmrse1hKZun4qaPF3LewugrnEgq`
+- Token: `public_ie55a1cQU472c1GBmeBqAVpL1ks3LFpu`
 
 ## Useful links
 
